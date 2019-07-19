@@ -20,7 +20,7 @@ class Products extends Component {
 
   // Parse our product list in Product component
   renderProducts () {
-    return this.props.products.map( (product, i) => {
+    return this.props.products.map((product, index) => {
       return <Product key={product.id} product={product} addProduct={this.addProduct} />
     });
   }
