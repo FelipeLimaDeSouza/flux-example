@@ -1,9 +1,7 @@
-'use strict';
+import App from '../dispatcher/App';
+import CartConstants from '../constants/Cart';
 
-let App = require('../dispatcher/App');
-let CartConstants = require('../constants/Cart');
-
-let Cart = {
+const Cart = {
 
   // Load initial products
   loadProducts: function (data) {
@@ -38,4 +36,4 @@ let Cart = {
 
 }
 
-module.exports = Cart;
+export default Cart;

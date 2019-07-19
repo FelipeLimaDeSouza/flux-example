@@ -1,5 +1,6 @@
-var Dispatcher = require('flux').Dispatcher,
-    App = new Dispatcher();
+import { Dispatcher } from 'flux';
+
+App = new Dispatcher();
 
 App.handleViewAction = function(action) {
   this.dispatch({
@@ -8,4 +9,4 @@ App.handleViewAction = function(action) {
   });
 }
 
-module.exports = App;
+export default App;

@@ -1,8 +1,6 @@
-'use strict';
-
-let App = require('../dispatcher/App');
-let EventEmitter = require('events').EventEmitter;
-let CartConstants =  require('../constants/Cart');
+import App from '../dispatcher/App';
+import { EventEmitter } from 'events';
+import CartConstants from '../constants/Cart';
 
 let _products = {}, _cartVisible = false;
 
@@ -96,4 +94,4 @@ App.register(function (payload) {
   Cart.emitChange();
 });
 
-module.exports = Cart;
+export default Cart;

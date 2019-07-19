@@ -1,8 +1,6 @@
-'use strict';
-
-module.exports = {
+export default {
   // Load Mock Product Data Into localStorage
-  load: function() {
+  load() {
     return [
       {
         id : '1',
