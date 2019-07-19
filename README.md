@@ -1,4 +1,2 @@
-# Exemplo de Arquitetura Flux
+# Flux Example for React Native (Expo)
 
-
-Neste repositório, há o padrão de arquitetura Flux e sua componentização
