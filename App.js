@@ -1,8 +1,13 @@
 import React from 'react';
+import {
+  SafeAreaView
+} from 'react-native';
 import Application from './src/components/Application';
 
 export default function App() {
   return (
-    <Application />
+    <SafeAreaView>
+      <Application />
+    </SafeAreaView>
   );
 }
