@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View,
+  ScrollView,
   Text
 } from 'react-native';
 import Products from '../stores/Products';
@@ -47,11 +47,11 @@ class Application extends Component {
   }
 
   render() {
-    return (<View>
+    return (<ScrollView>
         <Text>Beer Shopping App</Text>
         {this.renderCartComponent()}
         {this.renderProductsComponent()}
-      </View>
+      </ScrollView>
     );
   }
 };
