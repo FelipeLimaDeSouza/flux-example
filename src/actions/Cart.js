@@ -3,28 +3,28 @@ import CartConstants from '../constants/Cart';
 
 const Cart = {
 
-  loadProducts: function (data) {
+  loadProducts(data) {
     App.handleViewAction({
       actionType: CartConstants.LOAD_PRODUCTS,
       data: data
     })
   },
 
-  addToCart: function (productId) {
+  addToCart(productId) {
     App.handleViewAction({
       actionType: CartConstants.CART_ADD,
       product: productId
     })
   },
 
-  removeFromCart: function (productId) {
+  removeFromCart(productId) {
     App.handleViewAction({
       actionType: CartConstants.CART_REMOVE,
       product: productId
     })
   },
 
-  toggleCartVisible: function (isVisible) {
+  toggleCartVisible(isVisible) {
     App.handleViewAction({
       actionType: CartConstants.CART_VISIBLE,
       isVisible: isVisible
