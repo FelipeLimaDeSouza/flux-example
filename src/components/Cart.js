@@ -16,7 +16,7 @@ class Cart extends Component {
     CartActions.removeFromCart(productId);
   }
 
-  renderProductsList() {
+  renderProducts() {
     let products = this.props.cart.items;
 
     return products.map((product, index) => {
@@ -48,7 +48,7 @@ class Cart extends Component {
           </TouchableOpacity>
 
           <View style={{display: this.props.cart.isVisible ? 'flex' : 'none'}}>
-            {this.renderProductsList()}
+            {this.renderProducts()}
           </View>
 
           <Text>Total: {this.props.cart.total}</Text>
