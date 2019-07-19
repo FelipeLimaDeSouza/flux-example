@@ -8,14 +8,14 @@ import Product from './Product';
 
 class Products extends Component {
 
-  // Request products from somewhere
-  _loadProducts() {
-    setTimeout(Cart.loadProducts.bind(null, ProductsMock.load()));
-  }
-
   // Load products when the component render
   componentDidMount() {
     this._loadProducts();
+  }
+
+  // Request products from somewhere
+  _loadProducts() {
+    setTimeout(Cart.loadProducts.bind(null, ProductsMock.load()));
   }
 
   // Parse our product list in Product component
