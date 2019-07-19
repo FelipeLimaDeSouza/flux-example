@@ -8,7 +8,7 @@ import CartActions from '../actions/Cart';
 
 class Cart extends Component {
 
-  toggleCaartDisplay = () => {
+  toggleCartDisplay = () => {
     CartActions.toggleCartVisible(!this.props.cart.isVisible);
   }
 
@@ -36,14 +36,14 @@ class Cart extends Component {
     return (
       <View>
         <View>
-          <TouchableOpacity onPress={this.toggleCaartDisplay}>
+          <TouchableOpacity onPress={this.toggleCartDisplay}>
             <Text>Show Cart ({this.props.cart.amount})</Text>
           </TouchableOpacity>
         </View>
 
         <View>
 
-          <TouchableOpacity onPress={this.toggleCaartDisplay}>
+          <TouchableOpacity onPress={this.toggleCartDisplay}>
             <Text>icon</Text>
           </TouchableOpacity>
 
