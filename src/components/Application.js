@@ -23,11 +23,8 @@ function getApplicationState () {
 // Create main View Controller
 class Application extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = getApplicationState();
-  }
-
+  state = getApplicationState();
+  
   // Add change listener to store
   componentDidMount() {
     Products.addChangeListener(this._onChange);
