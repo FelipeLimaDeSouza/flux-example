@@ -42,11 +42,6 @@ class Cart extends Component {
         </View>
 
         <View>
-
-          <TouchableOpacity onPress={this.toggleCartDisplay}>
-            <Text>icon</Text>
-          </TouchableOpacity>
-
           <View style={{display: this.props.cart.isVisible ? 'flex' : 'none'}}>
             {this.renderProducts()}
           </View>
