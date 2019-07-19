@@ -21,7 +21,7 @@ class Cart extends Component {
 
     return Object.keys(products).map((product, index) => {
       return (
-        <View key={products[product].id}>
+        <View key={products[product].id} style={{marginVertical: 10}}>
           <Text>{products[product].name}</Text>
           <Text>{products[product].amount} x $ {products[product].price}</Text>
           <TouchableOpacity onPress={this.removeProduct.bind(null, products[product])}>
