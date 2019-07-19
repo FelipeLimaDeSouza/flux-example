@@ -29,7 +29,7 @@ let Cart = {
     })
   },
 
-  toggleCaartVisible: function (isVisible) {
+  toggleCartVisible: function (isVisible) {
     App.handleViewAction({
       actionType: CartConstants.CART_VISIBLE,
       isVisible: isVisible

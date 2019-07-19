@@ -9,7 +9,7 @@ import CartActions from '../actions/Cart';
 class Cart extends Component {
 
   toggleCaartDisplay = () => {
-    CartActions.toggleCaartVisible(!this.props.cart.isVisible);
+    CartActions.toggleCartVisible(!this.props.cart.isVisible);
   }
 
   removeProduct = (productId) => {
