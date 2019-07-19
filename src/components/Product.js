@@ -7,8 +7,6 @@ import {
 } from 'react-native';
 
 class Product extends Component {
-
-  // Render product view
   render() {
     return (
       <View>

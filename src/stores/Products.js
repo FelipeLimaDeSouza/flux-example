@@ -2,32 +2,26 @@ import App from '../dispatcher/App';
 import { EventEmitter } from 'events';
 import CartConstants from '../constants/Cart';
 
-// Initial data points
 let _products = [];
 
-// Will load products from some API
 function loadProducts (data) {
   _products = data;
 }
 
 class ProductsFactory extends EventEmitter{
 
-  // Return Product list
   getProducts () {
     return _products;
   }
 
-  // Emit Change event
   emitChange () {
     this.emit('change');
   }
 
-  // Add change listener
   addChangeListener (callback) {
     this.on('change', callback);
   }
 
-  // Remove change listener
   removeChangeListener (callback) {
     this.removeListener('change', callback);
   }

@@ -30,17 +30,14 @@ function _setVisibility (visibility) {
 
 class CartFactory extends EventEmitter{
 
-  // Return cart items
   getCartItems () {
     return _products;
   }
 
-  // Retrurn amount of items in cart
   getCartAmount () {
     return Object.keys(_products).length;
   }
 
-  // Return cart total cost
   getCartTotal () {
     let total = 0;
 
@@ -51,22 +48,18 @@ class CartFactory extends EventEmitter{
     return parseFloat(total.toFixed(2));
   }
 
-  // Return cart visibility state
   getCartVisible () {
     return _cartVisible;
   }
 
-  // Emit Change event
   emitChange () {
     this.emit('change');
   }
 
-  // Add change listener
   addChangeListener (callback) {
     this.on('change', callback)
   }
 
-  // Remove change listener
   removeChangeListener (callback) {
     this.removeListener('change', callback)
   }

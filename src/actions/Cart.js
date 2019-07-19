@@ -3,7 +3,6 @@ import CartConstants from '../constants/Cart';
 
 const Cart = {
 
-  // Load initial products
   loadProducts: function (data) {
     App.handleViewAction({
       actionType: CartConstants.LOAD_PRODUCTS,
@@ -11,7 +10,6 @@ const Cart = {
     })
   },
 
-  // Add item to cart
   addToCart: function (productId) {
     App.handleViewAction({
       actionType: CartConstants.CART_ADD,
@@ -19,7 +17,6 @@ const Cart = {
     })
   },
 
-  // Remove item from cart
   removeFromCart: function (productId) {
     App.handleViewAction({
       actionType: CartConstants.CART_REMOVE,

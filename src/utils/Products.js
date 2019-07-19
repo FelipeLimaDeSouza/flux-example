@@ -1,5 +1,4 @@
 export default {
-  // Load Mock Product Data Into localStorage
   load() {
     return [
       {

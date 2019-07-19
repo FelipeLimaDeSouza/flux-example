@@ -20,24 +20,20 @@ function getApplicationState () {
   };
 }
 
-// Create main View Controller
 class Application extends Component {
 
   state = getApplicationState();
   
-  // Add change listener to store
   componentDidMount() {
     Products.addChangeListener(this._onChange);
     Cart.addChangeListener(this._onChange);
   }
 
-  // Remove change listener from store
   componentWillUnmount() {
     Products.removeChangeListener(this._onChange);
     Cart.removeChangeListener(this._onChange);
   }
 
-  // Update state when store change
   _onChange = () => {
     this.setState(getApplicationState());
   }
@@ -50,7 +46,6 @@ class Application extends Component {
     return <ProductsComponent products={this.state.products} />;
   }
 
-  // Render the main component and childs, passing state via props
   render() {
     return (<View>
         <Text>Beer Shopping App</Text>
