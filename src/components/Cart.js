@@ -19,12 +19,12 @@ class Cart extends Component {
   renderProductsList() {
     let products = this.props.cart.items;
 
-    return Object.keys(products).map(product => {
+    return products.map((product, index) => {
       return (
-        <View key={products[product].id}>
-          <Text>{products[product].name}</Text>
-          <Text>{products[product].amount} x $ {products[product].price}</Text>
-          <TouchableOpacity onPress={this.removeProduct.bind(null, products[product])}>
+        <View key={products.id}>
+          <Text>{products.name}</Text>
+          <Text>{products.amount} x $ {products.price}</Text>
+          <TouchableOpacity onPress={this.removeProduct.bind(null, product)}>
             <Text>Remove</Text>
           </TouchableOpacity>
         </View>
