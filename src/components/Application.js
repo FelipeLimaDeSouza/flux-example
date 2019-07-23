@@ -42,7 +42,7 @@ class Application extends Component {
     return <CartComponent cart={this.state.cart} />;
   }
 
-  renderProductsComponent() {
+  renderProducts() {
     return <ProductsComponent products={this.state.products} />;
   }
 
@@ -50,7 +50,7 @@ class Application extends Component {
     return (<ScrollView>
         <Text>Beer Shopping App</Text>
         {this.renderCartComponent()}
-        {this.renderProductsComponent()}
+        {this.renderProducts()}
       </ScrollView>
     );
   }
