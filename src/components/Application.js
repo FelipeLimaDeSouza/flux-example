@@ -3,19 +3,19 @@ import {
   ScrollView,
   Text
 } from 'react-native';
-import Products from '../stores/Products';
-import Cart from '../stores/Cart';
+import ProductsStore from '../stores/Products';
+import CartStore from '../stores/Cart';
 import ProductsComponent from './Products';
 import CartComponent from './Cart';
 
 function getApplicationState () {
   return {
-    products: Products.getProducts(),
+    products: ProductsStore.getProducts(),
     cart: {
-      items: Cart.getCartItems(),
-      amount: Cart.getCartAmount(),
-      total: Cart.getCartTotal(),
-      isVisible: Cart.getCartVisible()
+      items: CartStore.getCartItems(),
+      amount: CartStore.getCartAmount(),
+      total: CartStore.getCartTotal(),
+      isVisible: CartStore.getCartVisible()
     }
   };
 }
@@ -25,13 +25,13 @@ class Application extends Component {
   state = getApplicationState();
   
   componentDidMount() {
-    Products.addChangeListener(this._onChange);
-    Cart.addChangeListener(this._onChange);
+    ProductsStore.addChangeListener(this._onChange);
+    CartStore.addChangeListener(this._onChange);
   }
 
   componentWillUnmount() {
-    Products.removeChangeListener(this._onChange);
-    Cart.removeChangeListener(this._onChange);
+    ProductsStore.removeChangeListener(this._onChange);
+    CartStore.removeChangeListener(this._onChange);
   }
 
   _onChange = () => {

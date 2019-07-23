@@ -1,4 +1,4 @@
-import App from '../dispatcher/App';
+import AppDispatcher from '../dispatcher/App';
 import { EventEmitter } from 'events';
 import CartConstants from '../constants/Cart';
 
@@ -28,9 +28,9 @@ class ProductsFactory extends EventEmitter{
 
 }
 
-let Products = new ProductsFactory();
+let ProductsStore = new ProductsFactory();
 
-App.register(function (payload) {
+AppDispatcher.register(function (payload) {
   let action = payload.action;
 
   switch (action.actionType) {
@@ -41,7 +41,7 @@ App.register(function (payload) {
       return;
   }
 
-  Products.emitChange();
+  ProductsStore.emitChange();
 });
 
-export default Products;
+export default ProductsStore;
