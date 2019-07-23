@@ -4,9 +4,9 @@ import {
 } from 'react-native';
 import CartActions from '../actions/Cart';
 import ProductsMock from '../utils/Products';
-import Product from './Product';
+import ProductComponent from './Product';
 
-class Products extends Component {
+class ProductsComponent extends Component {
 
   componentDidMount() {
     this._loadProducts();
@@ -18,7 +18,7 @@ class Products extends Component {
 
   renderProducts () {
     return this.props.products.map((product, index) => {
-      return <Product key={product.id} product={product} addProduct={this.addProduct} />
+      return <ProductComponent key={product.id} product={product} addProduct={this.addProduct} />
     });
   }
 
@@ -35,4 +35,4 @@ class Products extends Component {
   }
 };
 
-export default Products;
+export default ProductsComponent;

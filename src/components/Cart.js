@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import CartActions from '../actions/Cart';
 
-class Cart extends Component {
+class CartComponent extends Component {
 
   toggleCartDisplay = () => {
     CartActions.toggleCartVisible(!this.props.cart.isVisible);
@@ -53,4 +53,4 @@ class Cart extends Component {
   }
 };
 
-export default Cart;
+export default CartComponent;

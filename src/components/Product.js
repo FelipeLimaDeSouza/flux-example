@@ -6,7 +6,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-class Product extends Component {
+class ProductComponent extends Component {
   render() {
     return (
       <View style={{marginVertical: 20}}>
@@ -22,4 +22,4 @@ class Product extends Component {
   }
 };
 
-export default Product;
+export default ProductComponent;
