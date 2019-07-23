@@ -13,7 +13,7 @@ class ProductsComponent extends Component {
   }
 
   _loadProducts() {
-    setTimeout(CartActions.loadProducts.bind(null, ProductsMock.load()));
+    CartActions.loadProducts.bind(null, ProductsMock.load());
   }
 
   renderProducts () {
